@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uhuy - Blog Sosial Media</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Hubungkan ke file CSS -->
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>Uhuy</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="tentang.html">Tentang</a></li>
+                <li><a href="profil.html">Profil</a></li>
+                <li><a href="kontak.html">Kontak</a></li>
+                <li><a href="video.html">Video</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Konten Utama -->
+    <main>
+        <section id="recent-posts">
+            <h2>Konten Terbaru di Uhuy</h2>
+            <!-- Daftar konten terbaru (gambar, video, audio) -->
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Uhuy. All rights reserved.</p>
+    </footer>
+</body>
+</html>
