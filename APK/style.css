@@ -1,0 +1,1642 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f2f5;
+    height: 100vh;
+    display: flex;
+}
+
+/* Layout */
+.home-container {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+}
+
+.logo h2 {
+    color: #3b82f6;
+    margin-bottom: 30px;
+}
+
+.main-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: #333;
+    padding: 12px;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+
+.main-nav a:hover, .main-nav a.active {
+    background-color: #3b82f6;
+    color: white;
+}
+
+.main-nav i {
+    margin-right: 10px;
+}
+
+/* Main Content */
+.main-content {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.app-header {
+    margin-bottom: 30px;
+}
+
+.search-bar {
+    position: relative;
+    max-width: 500px;
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 12px 40px 12px 20px;
+    border: none;
+    border-radius: 20px;
+    background-color: #e4e6eb;
+}
+
+.search-bar i {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #666;
+}
+
+/* Stories */
+.stories-section {
+    margin-bottom: 30px;
+}
+
+.stories-container {
+    display: flex;
+    gap: 15px;
+    overflow-x: auto;
+    padding: 10px 0;
+}
+
+.story {
+    text-align: center;
+    flex: 0 0 auto;
+}
+
+.story-avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid #3b82f6;
+    margin-bottom: 5px;
+}
+
+.story-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Posts */
+.post {
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.post-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.post-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.post-info h3 {
+    margin: 0;
+    font-size: 16px;
+}
+
+.post-info span {
+    color: #666;
+    font-size: 12px;
+}
+
+.post-actions {
+    display: flex;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.post-actions button {
+    background: none;
+    border: none;
+    color: #666;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.post-actions button:hover {
+    color: #3b82f6;
+}
+
+/* Right Sidebar */
+.right-sidebar {
+    width: 300px;
+    padding: 20px;
+    background: white;
+    box-shadow: -2px 0 5px rgba(0,0,0,0.1);
+}
+
+.profile-card {
+    text-align: center;
+    padding: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.profile-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.btn-edit {
+    background-color: #3b82f6;
+    color: white;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.suggestions {
+    margin-top: 20px;
+}
+
+.suggestion {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.suggestion img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.suggestion-info {
+    flex: 1;
+}
+
+.suggestion-info h4 {
+    margin: 0;
+    font-size: 14px;
+}
+
+.suggestion-info p {
+    margin: 0;
+    color: #666;
+    font-size: 12px;
+}
+
+.btn-follow {
+    background: none;
+    border: none;
+    color: #3b82f6;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* Profile Page */
+.profile-page {
+    padding: 20px;
+}
+
+.profile-header {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.profile-cover {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.profile-info {
+    text-align: center;
+    margin-top: -50px;
+}
+
+.profile-picture {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 4px solid white;
+    margin-bottom: 10px;
+}
+
+.profile-stats {
+    display: flex;
+    justify-content: space-around;
+    margin: 30px 0;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.stat {
+    text-align: center;
+}
+
+.stat h3 {
+    margin: 0;
+    color: #3b82f6;
+}
+
+.stat p {
+    margin: 5px 0 0;
+    color: #666;
+}
+
+.posts-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.post-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Chat Page */
+.chat-page {
+    display: flex;
+    height: 100vh;
+    background: #f0f2f5;
+}
+
+.chat-list {
+    width: 350px;
+    background: white;
+    border-right: 1px solid #ddd;
+    display: flex;
+    flex-direction: column;
+}
+
+.chat-search {
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+    position: relative;
+}
+
+.chat-search input {
+    width: 100%;
+    padding: 10px 15px;
+    border: none;
+    background: #f0f2f5;
+    border-radius: 20px;
+    font-size: 14px;
+}
+
+.chat-search i {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #666;
+}
+
+.chat-items {
+    flex: 1;
+    overflow-y: auto;
+}
+
+.chat-item {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.chat-item:hover {
+    background: #f0f2f5;
+}
+
+.chat-item.active {
+    background: #e4e6eb;
+}
+
+.chat-item img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.chat-info {
+    flex: 1;
+}
+
+.chat-info h3 {
+    margin: 0;
+    font-size: 16px;
+    color: #333;
+}
+
+.chat-info p {
+    margin: 5px 0 0;
+    color: #666;
+    font-size: 14px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.chat-time {
+    color: #666;
+    font-size: 12px;
+}
+
+.chat-window {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background: white;
+}
+
+.chat-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+.chat-user-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.chat-user-info img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.chat-user-info h3 {
+    margin: 0;
+    font-size: 16px;
+    color: #333;
+}
+
+.chat-user-info p {
+    margin: 5px 0 0;
+    color: #666;
+    font-size: 14px;
+}
+
+.chat-actions {
+    display: flex;
+    gap: 15px;
+}
+
+.chat-actions button {
+    background: none;
+    border: none;
+    color: #666;
+    font-size: 18px;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.chat-actions button:hover {
+    color: #3b82f6;
+}
+
+.chat-messages {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    background: #f0f2f5;
+}
+
+.message {
+    max-width: 70%;
+    margin-bottom: 15px;
+    padding: 10px 15px;
+    border-radius: 15px;
+    position: relative;
+}
+
+.message.received {
+    background: white;
+    margin-right: auto;
+    border-bottom-left-radius: 0;
+}
+
+.message.sent {
+    background: #3b82f6;
+    color: white;
+    margin-left: auto;
+    border-bottom-right-radius: 0;
+}
+
+.message-time {
+    font-size: 12px;
+    color: #666;
+    margin-top: 5px;
+    display: block;
+}
+
+.chat-input {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    border-top: 1px solid #ddd;
+    background: white;
+}
+
+.input-options {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.input-options button {
+    background: none;
+    border: none;
+    color: #666;
+    font-size: 18px;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.input-options button:hover {
+    color: #3b82f6;
+}
+
+.chat-input input {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    background: #f0f2f5;
+    border-radius: 20px;
+    font-size: 14px;
+}
+
+.send-button {
+    background: none;
+    border: none;
+    color: #3b82f6;
+    font-size: 18px;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.file-preview {
+    position: relative;
+    margin-top: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.file-preview img,
+.file-preview video {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+}
+
+.remove-attachment {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Chat Info Modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.modal-content {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    margin: 50px auto;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+.modal-header h3 {
+    margin: 0;
+    font-size: 18px;
+    color: #333;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    color: #666;
+    font-size: 18px;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.modal-body {
+    padding: 20px;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.user-info img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+.user-info h4 {
+    margin: 0;
+    font-size: 16px;
+    color: #333;
+}
+
+.user-info p {
+    margin: 5px 0 0;
+    color: #666;
+    font-size: 14px;
+}
+
+.chat-options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.chat-options button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px;
+    border: none;
+    background: #f0f2f5;
+    border-radius: 8px;
+    color: #333;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.chat-options button:hover {
+    background: #e4e6eb;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .chat-list {
+        width: 300px;
+    }
+
+    .chat-item {
+        padding: 10px;
+    }
+
+    .chat-item img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .message {
+        max-width: 80%;
+    }
+}
+
+@media (max-width: 480px) {
+    .chat-list {
+        width: 100%;
+    }
+
+    .chat-window {
+        display: none;
+    }
+
+    .chat-window.active {
+        display: flex;
+    }
+
+    .chat-item {
+        padding: 8px;
+    }
+
+    .chat-item img {
+        width: 35px;
+        height: 35px;
+    }
+
+    .message {
+        max-width: 90%;
+    }
+}
+
+/* Story Page */
+.story-page {
+    padding: 20px;
+}
+
+.create-story {
+    margin-bottom: 30px;
+}
+
+.story-card {
+    position: relative;
+    width: 200px;
+    height: 300px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.story-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.story-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 15px;
+    background: linear-gradient(transparent, rgba(0,0,0,0.7));
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+.story-info img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.story-info h3 {
+    margin: 0;
+    font-size: 16px;
+}
+
+.story-card.create {
+    background: #f0f2f5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.story-add {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #3b82f6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.story-add i {
+    color: white;
+    font-size: 24px;
+}
+
+/* Posts Page */
+.posts-page {
+    padding: 20px;
+}
+
+.create-post {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.post-input {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.post-input img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.post-input input {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    background: #f0f2f5;
+    border-radius: 20px;
+}
+
+.post-options {
+    display: flex;
+    gap: 10px;
+}
+
+.post-options button {
+    background: none;
+    border: none;
+    color: #666;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.btn-post {
+    background: #3b82f6;
+    color: white;
+    padding: 8px 20px;
+    border-radius: 5px;
+    margin-left: auto;
+}
+
+.posts-feed {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.post {
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.post-content img {
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 15px;
+}
+
+/* Camera Page */
+.camera-page {
+    flex: 1;
+    padding: 20px;
+    background: #000;
+    color: white;
+}
+
+.camera-container {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.camera-view {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.camera-preview {
+    width: 100%;
+    height: 80vh;
+    background: #333;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.camera-preview img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.camera-controls {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.camera-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s;
+}
+
+.camera-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.camera-options {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.option {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.option i {
+    font-size: 24px;
+    color: white;
+}
+
+.option span {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.camera-gallery {
+    padding: 20px 0;
+}
+
+.camera-gallery h3 {
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.gallery-item {
+    aspect-ratio: 1;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Camera Modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 1000;
+}
+
+.modal-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.camera-container {
+    width: 100%;
+    max-width: 500px;
+    background-color: #000;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.camera-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.camera-view {
+    position: relative;
+    width: 100%;
+    padding-top: 177.78%; /* 16:9 aspect ratio */
+    background-color: #333;
+}
+
+#cameraPreview {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.camera-controls {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+.camera-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.camera-btn.capture {
+    background-color: #3b82f6;
+    width: 60px;
+    height: 60px;
+}
+
+.camera-btn:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    transform: scale(1.1);
+}
+
+.camera-btn.capture:hover {
+    background-color: #2563eb;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .camera-container {
+        max-width: 100%;
+        height: 100%;
+        border-radius: 0;
+    }
+
+    .camera-view {
+        padding-top: 100%;
+    }
+
+    .camera-btn {
+        width: 45px;
+        height: 45px;
+        font-size: 18px;
+    }
+
+    .camera-btn.capture {
+        width: 55px;
+        height: 55px;
+    }
+}
+
+@media (max-width: 480px) {
+    .camera-header {
+        padding: 10px;
+    }
+
+    .camera-controls {
+        padding: 15px;
+    }
+
+    .camera-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+    }
+
+    .camera-btn.capture {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+/* Landscape Mode */
+@media (orientation: landscape) {
+    .camera-container {
+        max-width: 80vh;
+    }
+
+    .camera-view {
+        padding-top: 56.25%; /* 16:9 aspect ratio for landscape */
+    }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+    .camera-container {
+        background-color: #000;
+    }
+
+    .camera-header,
+    .camera-controls {
+        background-color: rgba(0, 0, 0, 0.7);
+    }
+}
+
+/* Create Account Form */
+.create-account-section {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 30px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.create-account-section h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.account-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group label {
+    font-weight: 600;
+    color: #333;
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #3b82f6;
+    outline: none;
+}
+
+.profile-picture-upload {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.upload-preview {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid #3b82f6;
+    margin: 0 auto;
+}
+
+.upload-preview img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.btn-create {
+    background-color: #3b82f6;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-create:hover {
+    background-color: #2563eb;
+}
+
+/* Responsive Styles for Create Account */
+@media (max-width: 768px) {
+    .create-account-section {
+        padding: 20px;
+        margin: 20px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .upload-preview {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+@media (max-width: 480px) {
+    .create-account-section {
+        padding: 15px;
+        margin: 15px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    .upload-preview {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+/* Profile Display */
+.profile-display-section {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.profile-cover {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+}
+
+.profile-cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile-info {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    position: relative;
+    margin-top: -50px;
+}
+
+.profile-picture {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 5px solid white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.profile-picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile-details {
+    flex: 1;
+    margin-left: 30px;
+}
+
+.profile-details h1 {
+    margin: 0;
+    font-size: 24px;
+    color: #333;
+}
+
+.profile-details p {
+    margin: 5px 0;
+    color: #666;
+}
+
+.profile-details .bio {
+    margin-top: 10px;
+    color: #333;
+    line-height: 1.5;
+}
+
+.profile-stats {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    border-top: 1px solid #eee;
+}
+
+.stat {
+    text-align: center;
+}
+
+.stat h3 {
+    margin: 0;
+    font-size: 24px;
+    color: #333;
+}
+
+.stat p {
+    margin: 5px 0 0;
+    color: #666;
+}
+
+/* Responsive Profile */
+@media (max-width: 768px) {
+    .profile-info {
+        flex-direction: column;
+        text-align: center;
+        margin-top: -75px;
+    }
+
+    .profile-details {
+        margin: 20px 0 0;
+    }
+
+    .profile-picture {
+        width: 120px;
+        height: 120px;
+    }
+
+    .profile-cover {
+        height: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-picture {
+        width: 100px;
+        height: 100px;
+    }
+
+    .profile-cover {
+        height: 150px;
+    }
+
+    .profile-stats {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+/* Create Post Section */
+.create-post-section {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.post-input {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.post-input img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.post-input input {
+    flex: 1;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    font-size: 16px;
+}
+
+.post-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+}
+
+.media-options {
+    display: flex;
+    gap: 15px;
+}
+
+.media-options button {
+    background: none;
+    border: none;
+    color: #666;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 8px 12px;
+    border-radius: 8px;
+    transition: all 0.3s;
+}
+
+.media-options button:hover {
+    background: #f0f2f5;
+    color: #3b82f6;
+}
+
+.btn-post {
+    background: #3b82f6;
+    color: white;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+.btn-post:hover {
+    background: #2563eb;
+}
+
+.media-preview {
+    position: relative;
+    margin-top: 15px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.media-preview img,
+.media-preview video {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+}
+
+.btn-remove-media {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.location-tag {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 15px;
+    padding: 8px 12px;
+    background: #f0f2f5;
+    border-radius: 8px;
+    color: #666;
+}
+
+.location-tag button {
+    background: none;
+    border: none;
+    color: #666;
+    cursor: pointer;
+    padding: 0;
+}
+
+/* Posts Feed */
+.posts-feed {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.post {
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.post-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.post-header img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.post-info h3 {
+    margin: 0;
+    font-size: 16px;
+    color: #333;
+}
+
+.post-info span {
+    color: #666;
+    font-size: 12px;
+}
+
+.post-content {
+    margin-bottom: 15px;
+}
+
+.post-content p {
+    margin: 0 0 10px 0;
+    line-height: 1.5;
+}
+
+.post-content img,
+.post-content video {
+    width: 100%;
+    max-height: 500px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.post-actions {
+    display: flex;
+    gap: 15px;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+}
+
+.post-actions button {
+    background: none;
+    border: none;
+    color: #666;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.post-actions button:hover {
+    color: #3b82f6;
+}
+
+/* Responsive Styles for Posts */
+@media (max-width: 768px) {
+    .create-post-section {
+        padding: 15px;
+    }
+
+    .media-options {
+        flex-wrap: wrap;
+    }
+
+    .media-options button {
+        padding: 6px 10px;
+        font-size: 14px;
+    }
+
+    .post-content img,
+    .post-content video {
+        max-height: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .create-post-section {
+        padding: 10px;
+    }
+
+    .post-input input {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    .media-options button {
+        padding: 4px 8px;
+        font-size: 12px;
+    }
+
+    .post-content img,
+    .post-content video {
+        max-height: 200px;
+    }
+}
+  

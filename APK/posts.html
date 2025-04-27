@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Postingan - Chatteroo</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="home-container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="logo">
+                <h2>Chatteroo</h2>
+            </div>
+            <nav class="main-nav">
+                <a href="index.html"><i class="fas fa-home"></i> Beranda</a>
+                <a href="profile.html"><i class="fas fa-user"></i> Profil</a>
+                <a href="chat.html"><i class="fas fa-comment"></i> Chat</a>
+                <a href="story.html"><i class="fas fa-camera"></i> Story</a>
+                <a href="posts.html" class="active"><i class="fas fa-newspaper"></i> Postingan</a>
+            </nav>
+        </div>
+
+        <!-- Main Content -->
+        <div class="posts-page">
+            <!-- Create Post Section -->
+            <div class="create-post-section">
+                <div class="post-input">
+                    <img src="https://via.placeholder.com/40" alt="Profil" id="userProfilePicture">
+                    <input type="text" placeholder="Apa yang Anda pikirkan?" id="postContent">
+                </div>
+                <div class="post-options">
+                    <div class="media-options">
+                        <button type="button" onclick="openImageUpload()">
+                            <i class="fas fa-image"></i> Foto
+                        </button>
+                        <button type="button" onclick="openVideoUpload()">
+                            <i class="fas fa-video"></i> Video
+                        </button>
+                        <button type="button" onclick="addLocation()">
+                            <i class="fas fa-map-marker-alt"></i> Lokasi
+                        </button>
+                    </div>
+                    <button type="button" class="btn-post" onclick="createPost()">Posting</button>
+                </div>
+                <div class="media-preview" id="mediaPreview" style="display: none;">
+                    <img src="" alt="Preview" id="imagePreview">
+                    <video controls style="display: none;" id="videoPreview"></video>
+                    <button type="button" class="btn-remove-media" onclick="removeMedia()">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <div class="location-tag" id="locationTag" style="display: none;">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span id="locationText"></span>
+                    <button type="button" onclick="removeLocation()">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Posts Feed -->
+            <div class="posts-feed" id="postsFeed">
+                <!-- Posts will be dynamically added here -->
+            </div>
+        </div>
+    </div>
+</body>
+</html> 

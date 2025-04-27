@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Chat - Chatteroo</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="home-container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="logo">
+                <h2>Chatteroo</h2>
+            </div>
+            <nav class="main-nav">
+                <a href="index.html"><i class="fas fa-home"></i> Beranda</a>
+                <a href="profile.html"><i class="fas fa-user"></i> Profil</a>
+                <a href="chat.html" class="active"><i class="fas fa-comment"></i> Chat</a>
+                <a href="story.html"><i class="fas fa-camera"></i> Story</a>
+                <a href="posts.html"><i class="fas fa-newspaper"></i> Postingan</a>
+            </nav>
+        </div>
+
+        <!-- Main Content -->
+        <div class="chat-page">
+            <!-- Chat List -->
+            <div class="chat-list">
+                <div class="chat-search">
+                    <input type="text" placeholder="Cari chat..." id="chatSearch">
+                    <i class="fas fa-search"></i>
+                </div>
+                <div class="chat-items" id="chatItems">
+                    <!-- Chat items will be dynamically added here -->
+                </div>
+            </div>
+
+            <!-- Chat Window -->
+            <div class="chat-window" id="chatWindow">
+                <div class="chat-header">
+                    <div class="chat-user-info">
+                        <img src="https://via.placeholder.com/40" alt="Profil" id="chatPartnerPicture">
+                        <div>
+                            <h3 id="chatPartnerName">Pilih Chat</h3>
+                            <p id="chatPartnerStatus">Status</p>
+                        </div>
+                    </div>
+                    <div class="chat-actions">
+                        <button onclick="startVideoCall()"><i class="fas fa-video"></i></button>
+                        <button onclick="startVoiceCall()"><i class="fas fa-phone"></i></button>
+                        <button onclick="showChatInfo()"><i class="fas fa-info-circle"></i></button>
+                    </div>
+                </div>
+
+                <div class="chat-messages" id="chatMessages">
+                    <!-- Messages will be dynamically added here -->
+                </div>
+
+                <div class="chat-input">
+                    <div class="input-options">
+                        <button onclick="attachFile()"><i class="fas fa-paperclip"></i></button>
+                        <button onclick="openCamera()"><i class="fas fa-camera"></i></button>
+                        <button onclick="sendEmoji()"><i class="far fa-smile"></i></button>
+                    </div>
+                    <input type="text" placeholder="Ketik pesan..." id="messageInput">
+                    <button onclick="sendMessage()" class="send-button"><i class="fas fa-paper-plane"></i></button>
+                </div>
+
+                <!-- File Preview -->
+                <div class="file-preview" id="filePreview" style="display: none;">
+                    <img src="" alt="Preview" id="previewImage">
+                    <video controls style="display: none;" id="previewVideo"></video>
+                    <button onclick="removeAttachment()" class="remove-attachment">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Chat Info Modal -->
+            <div class="modal" id="chatInfoModal">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3>Info Chat</h3>
+                        <button onclick="closeChatInfo()" class="close-btn">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="user-info">
+                            <img src="" alt="Profil" id="infoProfilePicture">
+                            <div>
+                                <h4 id="infoUserName"></h4>
+                                <p id="infoUserStatus"></p>
+                            </div>
+                        </div>
+                        <div class="chat-options">
+                            <button onclick="muteChat()">
+                                <i class="fas fa-bell-slash"></i> Bisukan Notifikasi
+                            </button>
+                            <button onclick="blockUser()">
+                                <i class="fas fa-ban"></i> Blokir Pengguna
+                            </button>
+                            <button onclick="clearChat()">
+                                <i class="fas fa-trash"></i> Hapus Chat
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html> 

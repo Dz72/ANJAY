@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Story - Chatteroo</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="home-container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="logo">
+                <h2>Chatteroo</h2>
+            </div>
+            <nav class="main-nav">
+                <a href="index.html"><i class="fas fa-home"></i> Beranda</a>
+                <a href="profile.html"><i class="fas fa-user"></i> Profil</a>
+                <a href="chat.html"><i class="fas fa-comment"></i> Chat</a>
+                <a href="story.html" class="active"><i class="fas fa-camera"></i> Story</a>
+                <a href="posts.html"><i class="fas fa-newspaper"></i> Postingan</a>
+            </nav>
+        </div>
+
+        <!-- Main Content -->
+        <div class="story-page">
+            <div class="create-story">
+                <div class="story-card create" onclick="openCamera()">
+                    <div class="story-add">
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <h3>Buat Story</h3>
+                </div>
+            </div>
+
+            <!-- Camera Modal -->
+            <div id="cameraModal" class="modal">
+                <div class="modal-content">
+                    <div class="camera-container">
+                        <div class="camera-header">
+                            <button onclick="closeCamera()" class="close-btn"><i class="fas fa-times"></i></button>
+                            <h3>Ambil Foto</h3>
+                        </div>
+                        <div class="camera-view">
+                            <video id="cameraPreview" autoplay playsinline></video>
+                        </div>
+                        <div class="camera-controls">
+                            <button onclick="switchCamera()" class="camera-btn"><i class="fas fa-sync-alt"></i></button>
+                            <button onclick="takePhoto()" class="camera-btn capture"><i class="fas fa-camera"></i></button>
+                            <button onclick="openGallery()" class="camera-btn"><i class="fas fa-images"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="stories-grid">
+                <div class="story-card">
+                    <img src="https://via.placeholder.com/200" alt="Story">
+                    <div class="story-info">
+                        <img src="https://via.placeholder.com/40" alt="Profil">
+                        <h3>Teman 1</h3>
+                    </div>
+                </div>
+                <div class="story-card">
+                    <img src="https://via.placeholder.com/200" alt="Story">
+                    <div class="story-info">
+                        <img src="https://via.placeholder.com/40" alt="Profil">
+                        <h3>Teman 2</h3>
+                    </div>
+                </div>
+                <div class="story-card">
+                    <img src="https://via.placeholder.com/200" alt="Story">
+                    <div class="story-info">
+                        <img src="https://via.placeholder.com/40" alt="Profil">
+                        <h3>Teman 3</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html> 

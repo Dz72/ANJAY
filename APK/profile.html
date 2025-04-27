@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Profil - Chatteroo</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="home-container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="logo">
+                <h2>Chatteroo</h2>
+            </div>
+            <nav class="main-nav">
+                <a href="index.html"><i class="fas fa-home"></i> Beranda</a>
+                <a href="profile.html" class="active"><i class="fas fa-user"></i> Profil</a>
+                <a href="chat.html"><i class="fas fa-comment"></i> Chat</a>
+                <a href="story.html"><i class="fas fa-camera"></i> Story</a>
+                <a href="posts.html"><i class="fas fa-newspaper"></i> Postingan</a>
+            </nav>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <div class="profile-page">
+                <!-- Profile Display Section -->
+                <div class="profile-display-section">
+                    <div class="profile-header">
+                        <div class="profile-cover">
+                            <img src="https://via.placeholder.com/1200x300" alt="Cover" id="profileCover">
+                        </div>
+                        <div class="profile-info">
+                            <div class="profile-picture">
+                                <img src="https://via.placeholder.com/150" alt="Profil" id="profilePictureDisplay">
+                            </div>
+                            <div class="profile-details">
+                                <h1 id="profileName">Nama Anda</h1>
+                                <p id="profileUsername">@username</p>
+                                <p id="profileBio" class="bio">Bio Anda akan muncul di sini</p>
+                            </div>
+                            <button class="btn-edit" onclick="editProfile()">Edit Profil</button>
+                        </div>
+                    </div>
+
+                    <div class="profile-stats">
+                        <div class="stat">
+                            <h3 id="postCount">0</h3>
+                            <p>Postingan</p>
+                        </div>
+                        <div class="stat">
+                            <h3 id="followerCount">0</h3>
+                            <p>Pengikut</p>
+                        </div>
+                        <div class="stat">
+                            <h3 id="followingCount">0</h3>
+                            <p>Mengikuti</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Create Account Section (Hidden by default) -->
+                <div class="create-account-section" style="display: none;">
+                    <h2>Buat Akun Baru</h2>
+                    <form id="createAccountForm" class="account-form">
+                        <div class="form-group">
+                            <label for="fullName">Nama Lengkap</label>
+                            <input type="text" id="fullName" name="fullName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="username">Username</label>
+                            <input type="text" id="username" name="username" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" id="password" name="password" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="confirmPassword">Konfirmasi Password</label>
+                            <input type="password" id="confirmPassword" name="confirmPassword" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="bio">Bio</label>
+                            <textarea id="bio" name="bio" rows="3"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="profilePicture">Foto Profil</label>
+                            <div class="profile-picture-upload">
+                                <input type="file" id="profilePicture" name="profilePicture" accept="image/*">
+                                <div class="upload-preview">
+                                    <img src="https://via.placeholder.com/150" alt="Preview" id="profilePreview">
+                                </div>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn-create">Buat Akun</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html> 

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Chatteroo - Aplikasi Chat</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="home-container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="logo">
+                <h2>Chatteroo</h2>
+            </div>
+            <nav class="main-nav">
+                <a href="index.html" class="active"><i class="fas fa-home"></i> Beranda</a>
+                <a href="profile.html"><i class="fas fa-user"></i> Profil</a>
+                <a href="chat.html"><i class="fas fa-comment"></i> Chat</a>
+                <a href="story.html"><i class="fas fa-camera"></i> Story</a>
+                <a href="posts.html"><i class="fas fa-newspaper"></i> Postingan</a>
+            </nav>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Header -->
+            <div class="app-header">
+                <h1>Hi Chateroos! 😉</h1>
+                <div class="search-bar">
+                    <input type="text" placeholder="Cari teman atau postingan...">
+                    <i class="fas fa-search"></i>
+                </div>
+            </div>
+
+            <!-- Stories -->
+            <div class="stories-section">
+                <h2>Story Hari Ini</h2>
+                <div class="stories-container">
+                    <div class="story">
+                        <div class="story-avatar">
+                            <img src="https://via.placeholder.com/60" alt="Profil">
+                        </div>
+                        <span>Anda</span>
+                    </div>
+                    <div class="story">
+                        <div class="story-avatar">
+                            <img src="https://via.placeholder.com/60" alt="Profil">
+                        </div>
+                        <span>Teman 1</span>
+                    </div>
+                    <div class="story">
+                        <div class="story-avatar">
+                            <img src="https://via.placeholder.com/60" alt="Profil">
+                        </div>
+                        <span>Teman 2</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Posts -->
+            <div class="posts-section">
+                <h2>Postingan Terbaru</h2>
+                <div class="post">
+                    <div class="post-header">
+                        <img src="https://via.placeholder.com/40" alt="Profil" class="post-avatar">
+                        <div class="post-info">
+                            <h3>Nama Pengguna</h3>
+                            <span>2 jam yang lalu</span>
+                        </div>
+                    </div>
+                    <div class="post-content">
+                        <p>Ini adalah contoh postingan di Chatteroo. Anda dapat berbagi momen dan pengalaman dengan teman-teman Anda!</p>
+                    </div>
+                    <div class="post-actions">
+                        <button><i class="far fa-heart"></i> Suka</button>
+                        <button><i class="far fa-comment"></i> Komentar</button>
+                        <button><i class="far fa-share-square"></i> Bagikan</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Sidebar -->
+        <div class="right-sidebar">
+            <div class="profile-card">
+                <img src="https://via.placeholder.com/80" alt="Profil" class="profile-avatar">
+                <h3>Nama Anda</h3>
+                <p>@username</p>
+                <button class="btn-edit">Edit Profil</button>
+            </div>
+
+            <div class="suggestions">
+                <h3>Saran Teman</h3>
+                <div class="suggestion">
+                    <img src="https://via.placeholder.com/40" alt="Profil">
+                    <div class="suggestion-info">
+                        <h4>Teman Baru</h4>
+                        <p>@temanbaru</p>
+                    </div>
+                    <button class="btn-follow">Ikuti</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html> 
